@@ -77,12 +77,23 @@ function playGame(){
 
     }
 
+    // play 5 rounds
     for(let i = 0; i < 5; i++ ){
         playRound(getHumanChoice(), getComputerChoice())
+    }
+
+    // declare winner after
+    if( humanScore > computerScore){
+        console.log("Congrats you win, \nYour Score: " + humanScore + " \nComputer Score: " + computerScore);
+    }
+    else if( humanScore == computerScore){
+        console.log("It's a Tie! \nYour Score: " +  humanScore + " \nComputer Score: " + computerScore)
+    }
+    else {
+        console.log("Sorry you lost, \nYour Score: " + humanScore + " \nComputer Score: " + computerScore);
     }
 
 }
 
 playGame();
 
-console.log(humanScore);
